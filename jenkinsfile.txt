@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools { 
-        maven 'Maven' 
-        jdk 'java' 
+        maven 'MAVEN-HOME' 
+
     }
     environment {
         EMAIL_TO = 'rajeshraj19981@gmail.com'
@@ -14,11 +14,6 @@ mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number
         }
      }  
     stages {
-         stage ('git clone') {
-            steps {
-                git  'https://github.com/Raj000007/Devopsjenkins.git' 
-            }
-         }
           stage ('compile') {
             steps {
                 bat "mvn compile" 
