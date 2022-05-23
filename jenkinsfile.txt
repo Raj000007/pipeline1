@@ -5,7 +5,7 @@ pipeline {
 
     }
     environment {
-        EMAIL_TO = 'rajeshraj19981@gmail.com'
+        EMAIL_TO = 'projectsr27@gmail.com'
     }
      post {  
          always {  
